@@ -28,8 +28,8 @@ function App() {
   const murals = [
     {
       title: "Public Spaces",
-      imagePath: "./images/01_Ameena_Temple_Terrace_resized.jpg",
-      alt: "Public mural in an urban setting"
+      imagePath: "./images/public1.jpg",
+      alt: "Public mural at Omar K. Lightfoot Recreation Center"
     },
     {
       title: "Educational Spaces",
@@ -38,8 +38,8 @@ function App() {
     },
     {
       title: "Residential & Commercial",
-      imagePath: "./images/02_Ameena_Temple_Terrace_resized.jpg",
-      alt: "Custom mural in a private space"
+      imagePath: "./images/commercial1.jpg",
+      alt: "Commercial mural at Seagate Chiropractic"
     }
   ];
 
@@ -155,7 +155,7 @@ function App() {
             <div className="lg:w-1/2 mt-8 lg:mt-0">
               <h2 className="text-3xl font-bold mb-6">About the Artist</h2>
               <p className="text-gray-600 mb-4">
-                With over a decade of experience in creating stunning murals, Ameena Khan brings spaces to life through vibrant colors and meaningful designs. Her work spans from intimate residential spaces to large-scale public art installations.
+                With experience in creating stunning murals for public, commercial, and residential spaces, Ameena Khan brings spaces to life through vibrant colors and meaningful designs.
               </p>
               <p className="text-gray-600">
                 Each project is approached with creativity, precision, and a deep understanding of how art can transform environments and touch people's lives.
