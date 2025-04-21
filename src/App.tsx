@@ -154,11 +154,8 @@ function App() {
             </div>
             <div className="lg:w-1/2 mt-8 lg:mt-0">
               <h2 className="text-3xl font-bold mb-6">About the Artist</h2>
-              <p className="text-gray-600 mb-4">
-                With experience in creating stunning murals for public, commercial, and residential spaces, Ameena Khan brings spaces to life through vibrant colors and meaningful designs.
-              </p>
               <p className="text-gray-600">
-                Each project is approached with creativity, precision, and a deep understanding of how art can transform environments and touch people's lives.
+                With experience in creating stunning murals for public, commercial, and residential spaces, Ameena Khan brings spaces to life through vibrant colors and meaningful designs. Each project is approached with creativity, precision, and a deep understanding of how art can transform environments and touch people's lives.
               </p>
             </div>
           </div>
