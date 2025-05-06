@@ -1,6 +1,10 @@
 import React from 'react';
 import { Menu, X, Phone, Mail, Instagram, MapPin } from 'lucide-react';
 import { useState } from 'react';
+import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
+import PublicSpacesGallery from './pages/PublicSpacesGallery';
+import EducationalSpacesGallery from './pages/EducationalSpacesGallery';
+import ResidentialCommercialGallery from './pages/ResidentialCommercialGallery';
 
 function App() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -29,21 +33,24 @@ function App() {
     {
       title: "Public Spaces",
       imagePath: "./images/public1.jpg",
-      alt: "Public mural at Omar K. Lightfoot Recreation Center"
+      alt: "Public mural at Omar K. Lightfoot Recreation Center",
+      path: "/public-spaces"
     },
     {
       title: "Educational Spaces",
       imagePath: "./images/03_Ameena.jpg",
-      alt: "Educational mural in a learning environment"
+      alt: "Educational mural in a learning environment",
+      path: "/educational-spaces"
     },
     {
       title: "Residential & Commercial",
       imagePath: "./images/commercial1.jpg",
-      alt: "Commercial mural at Seagate Chiropractic"
+      alt: "Commercial mural at Seagate Chiropractic",
+      path: "/residential-commercial"
     }
   ];
 
-  return (
+  const HomePage = () => (
     <div className="min-h-screen bg-white">
       {/* Navigation */}
       <nav className="bg-white shadow-lg fixed w-full z-50">
@@ -100,7 +107,7 @@ function App() {
             alt="Colorful mural with tropical leaves"
             className="w-full h-full object-cover"
             loading="eager"
-            fetchpriority="high"
+            fetchPriority="high"
           />
           <div className="absolute inset-0 bg-black opacity-20"></div>
         </div>
@@ -122,7 +129,11 @@ function App() {
           <h2 className="text-3xl font-bold text-center mb-12">Featured Works</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {murals.map((mural, index) => (
-              <div key={index} className="bg-white rounded-lg overflow-hidden shadow-lg">
+              <Link
+                key={index}
+                to={mural.path}
+                className="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300"
+              >
                 <div className="aspect-w-16 aspect-h-9">
                   <img
                     src={mural.imagePath}
@@ -134,7 +145,7 @@ function App() {
                 <div className="p-6">
                   <h3 className="text-xl font-semibold">{mural.title}</h3>
                 </div>
-              </div>
+              </Link>
             ))}
           </div>
         </div>
@@ -254,16 +265,18 @@ function App() {
           </div>
         </div>
       </section>
-
-      {/* Footer */}
-      <footer className="bg-gray-900 text-white py-8">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center">
-            <p>© {new Date().getFullYear()} Colorscape Murals. All rights reserved.</p>
-          </div>
-        </div>
-      </footer>
     </div>
+  );
+
+  return (
+    <Router>
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/public-spaces" element={<PublicSpacesGallery />} />
+        <Route path="/educational-spaces" element={<EducationalSpacesGallery />} />
+        <Route path="/residential-commercial" element={<ResidentialCommercialGallery />} />
+      </Routes>
+    </Router>
   );
 }
 
