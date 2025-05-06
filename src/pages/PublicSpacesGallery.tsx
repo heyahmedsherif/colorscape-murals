@@ -4,18 +4,15 @@ import GalleryPage from '../components/GalleryPage';
 const publicImages = [
   {
     src: "./images/gallery/public/public1.jpg",
-    alt: "Public mural at Omar K. Lightfoot Recreation Center",
-    description: "Vibrant community mural at the recreation center"
+    alt: "Public mural at Omar K. Lightfoot Recreation Center"
   },
   {
     src: "./images/gallery/public/public8.jpg",
-    alt: "Public mural at community center",
-    description: "Large-scale mural enhancing public space"
+    alt: "Public mural at community center"
   },
   {
     src: "./images/gallery/public/public9.jpg",
-    alt: "Public mural in urban setting",
-    description: "Urban art transforming public space"
+    alt: "Public mural in urban setting"
   }
 ];
 

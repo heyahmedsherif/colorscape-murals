@@ -5,7 +5,7 @@ import { useNavigate } from 'react-router-dom';
 interface GalleryImage {
   src: string;
   alt: string;
-  description: string;
+  description?: string;
 }
 
 interface GalleryPageProps {
@@ -59,9 +59,6 @@ const GalleryPage: React.FC<GalleryPageProps> = ({ title, images }) => {
                 loading="lazy"
               />
               <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-20 transition-opacity rounded-lg" />
-              <div className="absolute bottom-0 left-0 right-0 p-4 text-white opacity-0 group-hover:opacity-100 transition-opacity">
-                <p className="text-sm">{image.description}</p>
-              </div>
             </div>
           ))}
         </div>
@@ -81,9 +78,6 @@ const GalleryPage: React.FC<GalleryPageProps> = ({ title, images }) => {
             alt={images[selectedImage].alt}
             className="max-h-[90vh] max-w-[90vw] object-contain"
           />
-          <p className="absolute bottom-4 left-4 text-white text-lg">
-            {images[selectedImage].description}
-          </p>
         </div>
       )}
     </div>

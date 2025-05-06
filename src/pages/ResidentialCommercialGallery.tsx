@@ -4,18 +4,15 @@ import GalleryPage from '../components/GalleryPage';
 const commercialImages = [
   {
     src: "./images/gallery/commercial/commercial1.jpg",
-    alt: "Commercial mural at Seagate Chiropractic",
-    description: "Professional mural enhancing business space"
+    alt: "Commercial mural at Seagate Chiropractic"
   },
   {
     src: "./images/gallery/commercial/commercial2.jpg",
-    alt: "Commercial mural in office",
-    description: "Office mural creating inspiring workspace"
+    alt: "Commercial mural in office"
   },
   {
     src: "./images/gallery/commercial/commercial3.jpg",
-    alt: "Commercial mural in retail space",
-    description: "Retail space mural attracting customers"
+    alt: "Commercial mural in retail space"
   }
 ];
 
